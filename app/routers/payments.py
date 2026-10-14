@@ -17,4 +17,6 @@ async def create_payment_intent(amount: int, currency: str = "usd"):
         return {"client_secret": intent.client_secret, "id": intent.id}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
     
